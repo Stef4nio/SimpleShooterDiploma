@@ -30,8 +30,11 @@ public:
 	UFUNCTION(BlueprintPure)
 	bool IsDead() const;
 
+	UFUNCTION(BlueprintCallable)
 	void Fire();
 
+	virtual void Jump() override;
+	
 	float GetShootingRange() const;
 	
 	UFUNCTION(BlueprintPure)
@@ -54,7 +57,6 @@ private:
 	
 	void MoveForward(float axisValue);
 	void MoveRight(float axisValue);
-	void Jump() override;
 	
 	void LookRight(float axisValue);
 	void LookUp(float axisValue);
